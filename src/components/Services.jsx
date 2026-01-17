@@ -9,25 +9,46 @@ const Services = () => {
   const services = [
     {
       icon: 'ri-code-s-slash-line',
-      title: 'Web Development with MERN',
+      title: 'Full-Stack Web Development',
       description:
-        'I build responsive, scalable web apps using MongoDB, Express.js, React, and Node.js. With clean code and a focus on performance and accessibility, I deliver smooth, user-friendly experiences from frontend to backend.',
+        'I build scalable, responsive, and secure web applications using MongoDB, Express.js, React, Python and Node.js. From UI to backend APIs, I focus on clean architecture, performance, and accessibility to deliver smooth user experiences.',
       gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     },
     {
-      icon: 'ri-smartphone-line',
-      title: 'Responsive Design',
+      icon: 'ri-robot-2-line',
+      title: 'AI / LLM App Development (RAG)',
       description:
-        'I make sure websites look great and work perfectly on all screen sizes, from mobile phones to desktops. Every pixel matters!',
-      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        'I build AI-powered applications using LLMs and Retrieval-Augmented Generation (RAG) with embeddings, semantic search, vector databases, and LangChain to create intelligent chat and knowledge systems.',
+      gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
     },
     {
-      icon: 'ri-tools-line',
-      title: 'Performance Optimization',
+      icon: 'ri-file-search-line',
+      title: 'Document AI (OCR + Smart Search)',
       description:
-        'I improve website loading speed and user experience by optimizing front-end code and assets, ensuring a smooth browsing experience.',
-      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+        'I develop document-processing solutions using OCR/PDF parsing, chunking, and embeddings to convert scanned files into searchable, structured, and AI-ready knowledge sources.',
+      gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
     },
+    {
+      icon: 'ri-shield-keyhole-line',
+      title: 'Backend APIs & Authentication',
+      description:
+        'I create secure REST APIs with Node.js and Express.js, implementing JWT authentication, role-based access, and scalable backend architecture for production-ready applications.',
+      gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
+    },
+    {
+      icon: 'ri-smartphone-line',
+      title: 'Responsive UI Development',
+      description:
+        'I create mobile-first, fully responsive interfaces using modern CSS, Tailwind CSS, and React. Your website will look consistent and work perfectly across mobiles, tablets, and desktops.',
+      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', 
+    },
+    {
+      icon: 'ri-speed-line',
+      title: 'Performance & SEO Optimization',
+      description:
+        'I optimize websites for speed, SEO, and smooth user experience by improving Core Web Vitals, reducing bundle size, optimizing images, and writing clean efficient frontend code.',
+      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+    }
   ];
 
   const containerVariants = {
@@ -55,6 +76,7 @@ const Services = () => {
 
   return (
     <section id="service" className="services" ref={ref}>
+
       <motion.div
         className="section__container services__container"
         variants={containerVariants}
@@ -117,13 +139,13 @@ const Services = () => {
                 <h4 className="service__title">{service.title}</h4>
                 <p className="service__description">{service.description}</p>
 
-                <motion.div
+                {/* <motion.div
                   className="service__number"
                   initial={{ opacity: 0.1 }}
                   whileHover={{ opacity: 0.2 }}
                 >
                   0{index + 1}
-                </motion.div>
+                </motion.div> */}
               </div>
 
               {/* Animated border */}

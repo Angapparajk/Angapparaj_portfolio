@@ -157,7 +157,7 @@ const Hero = () => {
           </motion.h2>
 
           <motion.p className="hero__description" variants={itemVariants}>
-            Building scalable, AI-powered web apps with React, Next.js, TypeScript & MERN stack. I craft accessible, user-centric interfaces backed by secure Node.js/Express REST APIs.
+            Building scalable, AI-powered web apps with Next.js, TypeScript, Python & MERN stack. I craft accessible, user-centric interfaces backed by secure Node.js/Express REST APIs.
             <br /><br />
             Expanding into AI/LLM Engineering—RAG pipelines, prompt engineering, semantic search, vector databases, LangChain, and document processing (OCR/PDF parsing).
           </motion.p>

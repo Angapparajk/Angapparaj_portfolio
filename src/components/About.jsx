@@ -38,7 +38,7 @@ const About = () => {
   const stats = [
     { number: '10+', label: 'Projects Completed' },
     { number: '5+', label: 'Technologies' },
-    { number: '100%', label: 'Client Satisfaction' },
+    // { number: '100%', label: 'Client Satisfaction' },
   ];
 
   return (
@@ -115,7 +115,7 @@ const About = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Full Stack Developer crafting responsive, scalable web apps with clean architecture. Skilled in React.js/Next.js, TypeScript, Tailwind CSS on the frontend, and Node.js, Express, MongoDB, PostgreSQL, Firebase on the backend—with JWT authentication and REST API design.
+            Full Stack Developer crafting responsive, scalable web apps with clean architecture. Skilled in React.js/Next.js, TypeScript, Tailwind CSS on the frontend, and Node.js, Express, Python, with data handled through MongoDB, PostgreSQL, Firebase—including JWT authentication and REST API design.
           </motion.p>
 
           <motion.p

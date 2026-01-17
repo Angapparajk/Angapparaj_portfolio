@@ -112,7 +112,7 @@ const Certifications = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span>Certifications</span> (MERN Stack)
+            <span>Certifications</span> (Full Stack)
           </motion.h2>
           <motion.p
             className="section__subtitle"
@@ -214,13 +214,13 @@ const Certifications = () => {
             <span className="stat-number">100%</span>
             <span className="stat-label">Completion Rate</span>
           </motion.div>
-          <motion.div
+          {/* <motion.div
             className="stat-item"
             whileHover={{ scale: 1.1 }}
           >
-            <span className="stat-number">MERN</span>
-            <span className="stat-label">Stack Expertise</span>
-          </motion.div>
+            <span className="stat-number">Full Stack</span>
+            <span className="stat-label">Expertise</span>
+          </motion.div> */}
         </motion.div>
       </div>
     </div>
