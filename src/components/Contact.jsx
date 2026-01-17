@@ -179,10 +179,35 @@ const Contact = () => {
         </motion.div>
       </motion.div>
 
+      {/* Animated background particles */}
+      <div className="contact__particles">
+        {[...Array(12)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="contact__particle"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: [0, 1, 0],
+              y: [-20, -100],
+              x: Math.random() * 100 - 50,
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+      </div>
+
       {/* Background decorations */}
       <div className="contact__bg">
         <motion.div
-          className="contact__bg-circle"
+          className="contact__bg-blob blob-1"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.2, 0.1],
@@ -190,15 +215,12 @@ const Contact = () => {
           transition={{ duration: 6, repeat: Infinity }}
         />
         <motion.div
-          className="contact__bg-gradient"
+          className="contact__bg-blob blob-2"
           animate={{
-            background: [
-              'radial-gradient(ellipse at 50% 100%, rgba(255, 78, 5, 0.15) 0%, transparent 60%)',
-              'radial-gradient(ellipse at 50% 100%, rgba(255, 78, 5, 0.25) 0%, transparent 60%)',
-              'radial-gradient(ellipse at 50% 100%, rgba(255, 78, 5, 0.15) 0%, transparent 60%)',
-            ],
+            scale: [1.2, 1, 1.2],
+            opacity: [0.15, 0.1, 0.15],
           }}
-          transition={{ duration: 4, repeat: Infinity }}
+          transition={{ duration: 7, repeat: Infinity }}
         />
       </div>
     </footer>

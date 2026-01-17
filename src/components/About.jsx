@@ -115,9 +115,7 @@ const About = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            I’m a Full Stack Developer passionate about building responsive, user-friendly web applications with clean code and scalable architecture. I started with frontend development using HTML, CSS, Tailwind CSS, and JavaScript, and then advanced into React.js / Next.js with TypeScript, where I implemented Context API, protected routes, and accessibility-first UI design.
-            <br />
-            As I expanded into full-stack development, I started building backend systems using Node.js and Express.js, creating secure and scalable RESTful APIs with authentication using JWT, and handling data with MongoDB, PostgreSQL/MySQL, and Firebase depending on application needs.
+            Full Stack Developer crafting responsive, scalable web apps with clean architecture. Skilled in React.js/Next.js, TypeScript, Tailwind CSS on the frontend, and Node.js, Express, MongoDB, PostgreSQL, Firebase on the backend—with JWT authentication and REST API design.
           </motion.p>
 
           <motion.p
@@ -126,9 +124,7 @@ const About = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Recently, I’ve been expanding into AI / LLM Engineering, working with LLMs and Retrieval-Augmented Generation (RAG) to build smart applications using prompt engineering, embeddings, semantic search, vector databases, and LangChain. I also work with document-processing workflows including OCR / PDF parsing and document chunking, enabling AI-powered search and automation for real-world content.
-            <br />
-            I love turning ideas into functional, standards-compliant experiences and continuously improving user experience through thoughtful problem-solving, collaboration, and learning modern technologies.
+            Expanding into AI/LLM Engineering—building intelligent systems with RAG pipelines, prompt engineering, embeddings, semantic search, vector databases, and LangChain. Experienced in document processing (OCR/PDF parsing, chunking) for AI-powered automation.
           </motion.p>
 
           {/* Stats */}

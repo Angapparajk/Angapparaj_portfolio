@@ -1,112 +1,16 @@
-import { motion, useInView, AnimatePresence } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import './Projects.css';
+import './ProjectsTimeline.css';
+import ProjectsTimeline from './ProjectsTimeline';
+import projectsData from '../Data/Projects.json';
 
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [activeCategory, setActiveCategory] = useState('all');
-  const [hoveredProject, setHoveredProject] = useState(null);
 
-  const categories = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'fullstack', label: 'Full Stack' },
-    { id: 'react', label: 'React' },
-    { id: 'htmlcss', label: 'HTML/CSS/JS' },
-  ];
-
-  const projects = [
-    {
-      id: 1,
-      title: 'HRMS System',
-      category: 'fullstack',
-      image: '/assets/hrms.png',
-      url: 'https://hrms-xi-teal.vercel.app/',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-      color: '#667eea',
-    },
-    {
-      id: 2,
-      title: 'Task Manager',
-      category: 'fullstack',
-      image: '/assets/task_manager.png',
-      url: 'https://taskmanagement-dun.vercel.app/',
-      tech: ['React', 'Node.js','Express', 'MongoDB'],
-      color: '#f093fb',
-    },
-    {
-      id: 3,
-      title: 'College Kart',
-      category: 'fullstack',
-      image: '/assets/collegekart.png',
-      url: 'https://college-kart-lemon.vercel.app/',
-      tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-      color: '#4facfe',
-    },
-    {
-      id: 4,
-      title: 'Healthcare App',
-      category: 'fullstack',
-      image: '/assets/helathacre.png',
-      url: 'https://niroggyan-healthcare.vercel.app/',
-      tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-      color: '#43e97b',
-    },
-    {
-      id: 5,
-      title: 'Nxt Watch',
-      category: 'react',
-      image: '/assets/nxt-watch.png',
-      url: 'https://nxttub.ccbp.tech/',
-      tech: ['React', 'REST API', 'CSS'],
-      color: '#fa709a',
-    },
-    {
-      id: 6,
-      title: 'Nxt Trendz',
-      category: 'react',
-      image: '/assets/nxt-trendz.png',
-      url: 'https://nxt-trendz-three-delta.vercel.app/',
-      tech: ['React', 'JavaScript', 'CSS'],
-      color: '#a8edea',
-    },
-    {
-      id: 7,
-      title: 'Jobby App',
-      category: 'react',
-      image: '/assets/Jooby.png',
-      url: 'https://jobby-ebon.vercel.app/',
-      tech: ['React', 'REST API', 'CSS'],
-      color: '#fed6e3',
-    },
-    {
-      id: 8,
-      title: 'Quiz App',
-      category: 'react',
-      image: '/assets/quiz.jpg',
-      url: 'https://quiz-react-six-blond.vercel.app/',
-      tech: ['React', 'JavaScript'],
-      color: '#ffecd2',
-    },
-    {
-      id: 9,
-      title: 'Food Website',
-      category: 'htmlcss',
-      image: '/assets/food.png',
-      url: 'https://angapparajk.github.io/Food-Project/',
-      tech: ['HTML', 'CSS', 'JavaScript'],
-      color: '#a1c4fd',
-    },
-    {
-      id: 10,
-      title: 'Todo Wiz',
-      category: 'htmlcss',
-      image: '/assets/todo.png',
-      url: 'https://angapparajk.github.io/todowiz/',
-      tech: ['HTML', 'CSS', 'JavaScript'],
-      color: '#c2e9fb',
-    },
-  ];
+  const { categories, projects } = projectsData;
 
   const filteredProjects =
     activeCategory === 'all'
@@ -118,21 +22,6 @@ const Projects = () => {
     visible: {
       opacity: 1,
       transition: { staggerChildren: 0.1 },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.5, ease: 'easeOut' },
-    },
-    exit: {
-      opacity: 0,
-      scale: 0.9,
-      transition: { duration: 0.3 },
     },
   };
 
@@ -188,96 +77,71 @@ const Projects = () => {
           ))}
         </motion.div>
 
-        {/* Projects grid */}
-        <motion.div className="projects__grid" layout>
-          <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, index) => (
-              <motion.a
-                key={project.id}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project__card"
-                variants={cardVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                layout
-                onHoverStart={() => setHoveredProject(project.id)}
-                onHoverEnd={() => setHoveredProject(null)}
-                style={{ '--card-color': project.color }}
-              >
-                <div className="project__image-wrapper">
-                  <motion.img
-                    src={project.image}
-                    alt={project.title}
-                    className="project__image"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.4 }}
-                  />
-                  <motion.div
-                    className="project__overlay"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <motion.div
-                      className="project__icon"
-                      initial={{ scale: 0, rotate: -180 }}
-                      whileHover={{ scale: 1, rotate: 0 }}
-                      transition={{ delay: 0.1, type: 'spring', stiffness: 200 }}
-                    >
-                      <i className="ri-external-link-line"></i>
-                    </motion.div>
-                  </motion.div>
-                </div>
-
-                <motion.div
-                  className="project__info"
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1 + 0.3 }}
-                >
-                  <h4 className="project__title">{project.title}</h4>
-                  <div className="project__tech">
-                    {project.tech.map((tech) => (
-                      <motion.span
-                        key={tech}
-                        className="tech__tag"
-                        whileHover={{ scale: 1.1, y: -2 }}
-                      >
-                        {tech}
-                      </motion.span>
-                    ))}
-                  </div>
-                </motion.div>
-
-                {/* Animated border on hover */}
-                <motion.div
-                  className="project__card-glow"
-                  animate={{
-                    opacity: hoveredProject === project.id ? 0.5 : 0,
-                  }}
-                  style={{ background: project.color }}
-                />
-              </motion.a>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        {/* Projects Timeline */}
+        <ProjectsTimeline projects={filteredProjects} />
       </motion.div>
 
-      {/* Background effects */}
+      {/* Animated grid background */}
+      <div className="projects__grid-bg">
+        <motion.div
+          className="projects__grid-pattern"
+          animate={{ opacity: [0.02, 0.05, 0.02] }}
+          transition={{ duration: 4, repeat: Infinity }}
+        />
+      </div>
+
+      {/* Floating particles */}
+      <div className="projects__particles">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="projects__particle"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: [0, 0.6, 0],
+              y: [-20, -120],
+              x: Math.random() * 60 - 30,
+            }}
+            transition={{
+              duration: 4 + Math.random() * 3,
+              repeat: Infinity,
+              delay: Math.random() * 3,
+            }}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${50 + Math.random() * 50}%`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Glowing orbs */}
       <div className="projects__bg">
         <motion.div
-          className="projects__bg-gradient"
+          className="projects__orb projects__orb--1"
           animate={{
-            background: [
-              'radial-gradient(circle at 20% 50%, rgba(255, 78, 5, 0.1) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 50%, rgba(255, 78, 5, 0.1) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 50%, rgba(255, 78, 5, 0.1) 0%, transparent 50%)',
-            ],
+            scale: [1, 1.3, 1],
+            opacity: [0.03, 0.08, 0.03],
+            x: [0, 50, 0],
           }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="projects__orb projects__orb--2"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.05, 0.1, 0.05],
+            x: [0, -30, 0],
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="projects__orb projects__orb--3"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.02, 0.06, 0.02],
+          }}
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
         />
       </div>
     </section>

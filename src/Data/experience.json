@@ -1,0 +1,35 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "role": "Full Stack Developer",
+      "company": "Tranzyd",
+      "type": "Onsite",
+      "duration": "Nov 2025 – Present",
+      "techStack": ["React", "TypeScript", "Tailwind CSS", "Node.js", "Python", "LLM", "Vector DB", "OpenAI API", "RAG"],
+      "projects": [
+        {
+          "name": "Bravespaces",
+          "subtitle": "AI-Driven Strategic Intelligence Platform (US Universities)",
+          "points": [
+            "Developed an AI-powered knowledge intelligence system enabling universities to analyze internal data and plan future strategies.",
+            "Built document ingestion pipelines and custom chatbots trained on uploaded institutional data.",
+            "Designed AI-assisted modules for Vision, Mission, Strategy, and Core Values creation.",
+            "Implemented analytics dashboards for market analysis, retention, and revenue growth tracking.",
+            "Used Claude AI & ChatGPT for system design, refactoring, prompt engineering, and feature planning."
+          ]
+        },
+        {
+          "name": "AI Photo Manager",
+          "subtitle": "Album Automation Platform",
+          "points": [
+            "Built an AI-powered photo management system for wedding & event photography studios.",
+            "Implemented AI logic to filter unusable photos (eye-closed, duplicates, low-quality images).",
+            "Developed automatic album layout generation and a client approval portal.",
+            "Created post-processing workflows for final editing and lab-ready exports."
+          ]
+        }
+      ]
+    }
+  ]
+}

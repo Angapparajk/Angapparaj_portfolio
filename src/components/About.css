@@ -1,5 +1,5 @@
 .about {
-  background: var(--text-dark);
+  background: var(--primary-color);
   position: relative;
   overflow: hidden;
 }
@@ -20,7 +20,7 @@
 .about__image-container {
   position: relative;
   width: 350px;
-  height: 400px;
+  height: 500px;
 }
 
 .about__image {
@@ -168,8 +168,8 @@
   }
 
   .about__image-container {
-    width: 380px;
-    height: 440px;
+    width: 400px;
+    height: 550px;
   }
 
   .stat__number {
@@ -184,8 +184,8 @@
   }
 
   .about__image-container {
-    width: 320px;
-    height: 370px;
+    width: 340px;
+    height: 470px;
   }
 }
 
@@ -214,8 +214,8 @@
   }
 
   .about__image-container {
-    width: 300px;
-    height: 350px;
+    width: 320px;
+    height: 440px;
   }
 
   .experience__badge {
@@ -232,8 +232,8 @@
 /* Tablet Portrait */
 @media (max-width: 767px) {
   .about__image-container {
-    width: 260px;
-    height: 310px;
+    width: 280px;
+    height: 380px;
   }
 
   .about__stats {
@@ -284,8 +284,8 @@
 /* Large Mobile */
 @media (max-width: 575px) {
   .about__image-container {
-    width: 240px;
-    height: 280px;
+    width: 260px;
+    height: 340px;
   }
 
   .about__stats {
@@ -312,8 +312,8 @@
 /* Mobile */
 @media (max-width: 479px) {
   .about__image-container {
-    width: 220px;
-    height: 260px;
+    width: 240px;
+    height: 320px;
   }
 
   .about__subtitle {
@@ -332,8 +332,8 @@
 /* Extra Small Mobile */
 @media (max-width: 359px) {
   .about__image-container {
-    width: 200px;
-    height: 240px;
+    width: 220px;
+    height: 290px;
   }
 
   .stat__number {

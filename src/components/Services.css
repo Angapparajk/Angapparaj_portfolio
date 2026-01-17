@@ -1,5 +1,5 @@
 .services {
-  background: var(--primary-color);
+  background: linear-gradient(135deg, var(--text-dark) 0%, #1a1a2e 50%, #16213e 100%);
   position: relative;
   overflow: hidden;
 }
@@ -107,19 +107,50 @@
   z-index: 3;
 }
 
-.services__bg {
+/* Background Particles */
+.services__particles {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
 
-.services__bg-grid {
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+.services__particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--secondary-color);
+}
+
+/* Background Blobs */
+.services__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.services__bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.services__bg-blob.blob-1 {
+  width: 350px;
+  height: 350px;
+  background: var(--secondary-color);
+  bottom: -100px;
+  left: -100px;
+}
+
+.services__bg-blob.blob-2 {
+  width: 300px;
+  height: 300px;
+  background: #667eea;
+  top: -50px;
+  right: -50px;
 }
 
 /* Large Desktop */

@@ -1,0 +1,291 @@
+/* ========================
+   Projects Timeline Styles
+   ======================== */
+
+.projects__timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+/* ========================
+   Vertical Timeline Line
+   ======================== */
+.timeline__line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--secondary-color) 0%,
+    var(--secondary-color) 50%,
+    rgba(255, 78, 5, 0.3) 100%
+  );
+  transform: translateX(-50%);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Glow effect on the line */
+.timeline__line::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: var(--secondary-color);
+  transform: translateX(-50%);
+  filter: blur(15px);
+  opacity: 0.3;
+}
+
+/* ========================
+   Timeline Items Container
+   ======================== */
+.timeline__items {
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================
+   Individual Timeline Item
+   ======================== */
+.timeline__item {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================
+   Content Areas (Left/Right)
+   ======================== */
+.timeline__content {
+  width: 100%;
+}
+
+.timeline__content--left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.timeline__content--right {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Mobile content - hidden by default */
+.timeline__content--mobile {
+  display: none;
+}
+
+/* ========================
+   Center Section (Dot & Connectors)
+   ======================== */
+.timeline__center {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  z-index: 3;
+}
+
+/* ========================
+   Timeline Dot
+   ======================== */
+.timeline__dot {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background: var(--dot-color, var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px var(--dot-color, var(--secondary-color)),
+              0 0 40px rgba(255, 78, 5, 0.3);
+  z-index: 4;
+}
+
+.timeline__dot-inner {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* Pulse animation on dot */
+.timeline__dot::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--dot-color, var(--secondary-color));
+  animation: pulse 2s ease-out infinite;
+  opacity: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* ========================
+   Connector Lines (Dot to Card)
+   ======================== */
+.timeline__connector {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 2px;
+  background: var(--secondary-color);
+  opacity: 0.5;
+}
+
+.timeline__connector--left {
+  right: calc(50% + 12px);
+  transform-origin: right center;
+}
+
+.timeline__connector--right {
+  left: calc(50% + 12px);
+  transform-origin: left center;
+}
+
+/* ========================
+   Project Cards in Timeline
+   ======================== */
+.projects__timeline .project__card {
+  max-width: 480px;
+  width: 100%;
+}
+
+/* ========================
+   Tablet Breakpoint (< 1024px)
+   ======================== */
+@media (max-width: 1024px) {
+  .projects__timeline {
+    padding: 2rem 1rem;
+  }
+
+  .timeline__item {
+    gap: 1.5rem;
+  }
+
+  .projects__timeline .project__card {
+    max-width: 380px;
+  }
+}
+
+/* ========================
+   Mobile Breakpoint (< 768px)
+   Single column layout with line on left
+   ======================== */
+@media (max-width: 768px) {
+  .projects__timeline {
+    padding: 2rem 0 2rem 2rem;
+  }
+
+  /* Move line to the left */
+  .timeline__line {
+    left: 0;
+    transform: none;
+  }
+
+  /* Change to single column layout */
+  .timeline__item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Hide desktop left/right content */
+  .timeline__content--left,
+  .timeline__content--right {
+    display: none;
+  }
+
+  /* Show mobile content */
+  .timeline__content--mobile {
+    display: block;
+    flex: 1;
+  }
+
+  /* Adjust center section for mobile */
+  .timeline__center {
+    flex-shrink: 0;
+    width: auto;
+  }
+
+  /* Smaller dot on mobile */
+  .timeline__dot {
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeline__dot-inner {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Only show right connector on mobile */
+  .timeline__connector--left {
+    display: none;
+  }
+
+  .timeline__connector--right {
+    left: 50%;
+    width: 20px;
+  }
+
+  /* Full width cards on mobile */
+  .projects__timeline .project__card {
+    max-width: 100%;
+  }
+}
+
+/* ========================
+   Small Mobile (< 480px)
+   ======================== */
+@media (max-width: 480px) {
+  .projects__timeline {
+    padding: 1.5rem 0 1.5rem 1rem;
+  }
+
+  .timeline__item {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline__dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline__dot-inner {
+    width: 6px;
+    height: 6px;
+  }
+
+  .timeline__connector--right {
+    width: 15px;
+  }
+}

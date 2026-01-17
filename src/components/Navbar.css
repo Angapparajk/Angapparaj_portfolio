@@ -4,15 +4,17 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(48, 48, 45, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(13, 19, 25, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-  background: rgba(13, 19, 25, 0.95);
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(13, 19, 25, 0.98);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 78, 5, 0.15);
 }
 
 .nav__container {

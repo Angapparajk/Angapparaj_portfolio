@@ -149,12 +149,48 @@ const Services = () => {
         </motion.div>
       </motion.div>
 
+      {/* Animated background particles */}
+      <div className="services__particles">
+        {[...Array(12)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="services__particle"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: [0, 1, 0],
+              y: [-20, -100],
+              x: Math.random() * 100 - 50,
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+      </div>
+
       {/* Background decorations */}
       <div className="services__bg">
         <motion.div
-          className="services__bg-grid"
-          animate={{ opacity: [0.02, 0.05, 0.02] }}
-          transition={{ duration: 4, repeat: Infinity }}
+          className="services__bg-blob blob-1"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.15, 0.1],
+          }}
+          transition={{ duration: 6, repeat: Infinity }}
+        />
+        <motion.div
+          className="services__bg-blob blob-2"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.15, 0.1, 0.15],
+          }}
+          transition={{ duration: 7, repeat: Infinity }}
         />
       </div>
     </section>

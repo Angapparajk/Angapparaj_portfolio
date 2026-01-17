@@ -1,0 +1,110 @@
+{
+  "categories": [
+    { "id": "all", "label": "All Projects" },
+    { "id": "fullstack", "label": "Full Stack" },
+    { "id": "react", "label": "React" },
+    { "id": "htmlcss", "label": "HTML/CSS/JS" }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "HRMS System",
+      "description": "A comprehensive Human Resource Management System with employee tracking, attendance management, and payroll features.",
+      "category": "fullstack",
+      "image": "/assets/hrms.png",
+      "url": "https://hrms-xi-teal.vercel.app/",
+      "tech": ["React", "Node.js", "MongoDB", "Express"],
+      "color": "#667eea"
+    },
+    {
+      "id": 2,
+      "title": "Task Manager",
+      "description": "A full-featured task management application with real-time updates, project organization, and team collaboration.",
+      "category": "fullstack",
+      "image": "/assets/task_manager.png",
+      "url": "https://taskmanagement-dun.vercel.app/",
+      "tech": ["React", "Node.js", "Express", "MongoDB"],
+      "color": "#f093fb"
+    },
+    {
+      "id": 3,
+      "title": "College Kart",
+      "description": "An e-commerce platform designed for college students to buy and sell used items within campus.",
+      "category": "fullstack",
+      "image": "/assets/collegekart.png",
+      "url": "https://college-kart-lemon.vercel.app/",
+      "tech": ["React", "Node.js", "Express", "MongoDB"],
+      "color": "#4facfe"
+    },
+    {
+      "id": 4,
+      "title": "Healthcare App",
+      "description": "A healthcare management application featuring appointment booking, patient records, and doctor consultation.",
+      "category": "fullstack",
+      "image": "/assets/helathacre.png",
+      "url": "https://niroggyan-healthcare.vercel.app/",
+      "tech": ["React", "Node.js", "Express", "MongoDB"],
+      "color": "#43e97b"
+    },
+    {
+      "id": 5,
+      "title": "Nxt Watch",
+      "description": "A YouTube-like video streaming platform with authentication, like/dislike, and saved videos feature.",
+      "category": "react",
+      "image": "/assets/nxt-watch.png",
+      "url": "https://nxttub.ccbp.tech/",
+      "tech": ["React", "REST API", "CSS"],
+      "color": "#fa709a"
+    },
+    {
+      "id": 6,
+      "title": "Nxt Trendz",
+      "description": "An e-commerce application with product filtering, cart management, and secure checkout process.",
+      "category": "react",
+      "image": "/assets/nxt-trendz.png",
+      "url": "https://nxt-trendz-three-delta.vercel.app/",
+      "tech": ["React", "JavaScript", "CSS"],
+      "color": "#a8edea"
+    },
+    {
+      "id": 7,
+      "title": "Jobby App",
+      "description": "A job search application with advanced filtering, job details, and application tracking features.",
+      "category": "react",
+      "image": "/assets/Jooby.png",
+      "url": "https://jobby-ebon.vercel.app/",
+      "tech": ["React", "REST API", "CSS"],
+      "color": "#fed6e3"
+    },
+    {
+      "id": 8,
+      "title": "Quiz App",
+      "description": "An interactive quiz application with multiple categories, timed questions, and score tracking.",
+      "category": "react",
+      "image": "/assets/quiz.jpg",
+      "url": "https://quiz-react-six-blond.vercel.app/",
+      "tech": ["React", "JavaScript"],
+      "color": "#ffecd2"
+    },
+    {
+      "id": 9,
+      "title": "Food Website",
+      "description": "A responsive food ordering website with menu browsing, cart functionality, and order placement.",
+      "category": "htmlcss",
+      "image": "/assets/food.png",
+      "url": "https://angapparajk.github.io/Food-Project/",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "color": "#a1c4fd"
+    },
+    {
+      "id": 10,
+      "title": "Todo Wiz",
+      "description": "A simple yet elegant todo application with local storage persistence and task filtering.",
+      "category": "htmlcss",
+      "image": "/assets/todo.png",
+      "url": "https://angapparajk.github.io/todowiz/",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "color": "#c2e9fb"
+    }
+  ]
+}

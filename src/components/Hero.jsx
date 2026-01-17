@@ -157,10 +157,9 @@ const Hero = () => {
           </motion.h2>
 
           <motion.p className="hero__description" variants={itemVariants}>
-            Full Stack Developer | AI-Driven, Scalable, Accessible Web Apps <br />
-            I build clean, responsive, and user-centric web applications using the MERN stack and modern frontend technologies like React, Next.js, and TypeScript. On the frontend, I’ve implemented Context API, protected routes, and accessibility-first UI design. On the backend, I use Node.js, Express, and MongoDB to build secure REST APIs for real-world applications.
-            <br />
-            Now expanding into AI / LLM Engineering, I work with LLMs and RAG pipelines, including prompt engineering, embeddings, semantic search, vector databases, and LangChain, and I’ve explored document processing workflows like OCR / PDF parsing and document chunking to build intelligent, searchable systems.
+            Building scalable, AI-powered web apps with React, Next.js, TypeScript & MERN stack. I craft accessible, user-centric interfaces backed by secure Node.js/Express REST APIs.
+            <br /><br />
+            Expanding into AI/LLM Engineering—RAG pipelines, prompt engineering, semantic search, vector databases, LangChain, and document processing (OCR/PDF parsing).
           </motion.p>
 
           <motion.div className="hero__buttons" variants={itemVariants}>
